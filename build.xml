@@ -22,6 +22,7 @@
             <test name="com.marsrover.PlatueTest" />
             <test name="com.marsrover.RoverTest" />
             <test name="com.marsrover.ViewTest" />
+            <test name="com.marsrover.RoverDriverTest" />
             <classpath>
                 <pathelement location="build"/>
                 <path refid="classpath"/>
