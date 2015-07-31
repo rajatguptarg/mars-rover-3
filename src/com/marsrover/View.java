@@ -44,4 +44,13 @@ public class View {
     public void startMission() {
         driver.drive(rover);
     }
+
+    public void displayRoverPosition() {
+        if (platue.isPresent(rover)) {
+            System.out.println(rover.position());
+        }
+        else {
+            System.out.println("Rover Cashed!!");
+        }
+    }
 }

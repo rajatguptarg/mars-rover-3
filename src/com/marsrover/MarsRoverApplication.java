@@ -12,9 +12,14 @@ public class MarsRoverApplication {
     public void start() {
         view.initializePlatue();
         while (turns-- > 0) {
-            view.initializeRover();
-            view.provideDrivingDirection();
-            view.startMission();
+            execute();
         }
+    }
+
+    void execute() {
+        view.initializeRover();
+        view.provideDrivingDirection();
+        view.startMission();
+        view.displayRoverPosition();
     }
 }
