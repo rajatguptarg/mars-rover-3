@@ -7,7 +7,7 @@ public class MarsRoverApplication {
         this.view = view;
     }
 
-    public boolean start() {
-        return true;
+    public void start() {
+        view.initializeEnvironment();
     }
 }

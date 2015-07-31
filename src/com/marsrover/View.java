@@ -1,4 +1,33 @@
 package com.marsrover;
 
+import java.util.Scanner;
+
 public class View {
+    Platue platue;
+    Rover rover;
+
+    public View() {
+        this.platue = new Platue();
+        this.rover =  new Rover();
+    }
+
+    String getInput() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+
+    public void initializeEnvironment() {
+        String[] platueBoundary = getInput().split("\\s+");
+        int boundaryX = Integer.parseInt(platueBoundary[0]);
+        int boundaryY = Integer.parseInt(platueBoundary[1]);
+
+        platue.initializeBoundary(boundaryX, boundaryY);
+
+        String[] roverInfo = getInput().split("\\s+");
+        int x = Integer.parseInt(roverInfo[0]);
+        int y = Integer.parseInt(roverInfo[1]);
+        int direction = Integer.parseInt(roverInfo[2]);
+
+        rover.initializeRoverPosition(x, y, direction);
+    }
 }

@@ -19,6 +19,9 @@
     <target name="runjunit" depends="compile">
         <junit haltonfailure="true" printsummary="true" showoutput="yes">
             <test name="com.marsrover.MarsRoverApplicationTest" />
+            <test name="com.marsrover.PlatueTest" />
+            <test name="com.marsrover.RoverTest" />
+            <test name="com.marsrover.ViewTest" />
             <classpath>
                 <pathelement location="build"/>
                 <path refid="classpath"/>
